@@ -1,0 +1,11 @@
+[Unit]
+Description=NotificationProcessorDaemon
+
+[Service]
+User={{ user }}
+Group={{ group }}
+ExecStart={{ start }}/notificationprocessor/SumTotal.Notification.ProcessorHost
+WorkingDirectory={{ work_location }}/notificationprocessor
+
+[Install]
+WantedBy=default.target

@@ -1,0 +1,14 @@
+[Unit]
+Description=Cassandra Cluster Node Daemon
+
+[Service]
+Type=forking
+LimitNOFILE=100000
+User={{user}}
+Group={{group}}
+ExecStart={{ cassandra_dir }}/bin/cassandra
+
+SuccessExitStatus=143
+
+[Install]
+WantedBy=default.target

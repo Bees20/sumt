@@ -1,0 +1,6 @@
+--update DATACENTER set SVC_ACCOUNT_OU = 'OU=UDA,OU=service_accounts,OU=groups_users,DC=COTESTDEV,DC=LOCAL;CN=svc_accounts_uda,OU=groups,OU=groups_users,DC=COTESTDEV,DC=LOCAL' where code = 'LDC'
+--update DATACENTER set SVC_ACCOUNT_OU = 'OU=UDA,OU=service_accounts,OU=groups_users,DC=COTESTDEV,DC=LOCAL;CN=svc_accounts_uda,OU=groups,OU=groups_users,DC=COTESTDEV,DC=LOCAL' where code = 'GSL'
+update DATACENTER set SVC_ACCOUNT_OU = 'OU=UDA,OU=service_accounts,OU=groups_users,DC=OD,DC=LOCAL;CN=svc_accounts_uda,OU=groups,OU=groups_users,DC=OD,DC=LOCAL' where code = 'CMH'
+update DATACENTER set SVC_ACCOUNT_OU = 'OU=UDA,OU=service_accounts,OU=groups_users,DC=OD,DC=LOCAL;CN=svc_accounts_uda,OU=groups,OU=groups_users,DC=OD,DC=LOCAL' where code = 'DSM'
+update DATACENTER set SVC_ACCOUNT_OU = 'OU=UDA,OU=service_accounts,OU=groups_users,DC=OD,DC=LOCAL;CN=svc_accounts_uda,OU=groups,OU=groups_users,DC=OD,DC=LOCAL' where code = 'AMS'
+update DATACENTER set SVC_ACCOUNT_OU = 'OU=UDA,OU=service_accounts,OU=groups_users,DC=COPCI,DC=LOCAL;CN=svc_accounts_uda_pci,OU=groups,OU=groups_users,DC=COPCI,DC=LOCAL' where code = 'PCM'

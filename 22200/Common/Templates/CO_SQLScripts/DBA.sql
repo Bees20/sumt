@@ -1,0 +1,12 @@
+USE [master]
+GO
+
+/****** Object:  Database [dba]    Script Date: 7/26/2021 6:28:11 AM ******/
+CREATE DATABASE [dba]
+ CONTAINMENT = NONE
+ ON  PRIMARY 
+( NAME = N'MTDBA', FILENAME = N'D:\mssql\data\dba.mdf' , SIZE = 13631488KB , MAXSIZE = UNLIMITED, FILEGROWTH = 4194304KB )
+ LOG ON 
+( NAME = N'MTDBA_log', FILENAME = N'G:\mssql\logs\dba_1.LDF' , SIZE = 4786432KB , MAXSIZE = UNLIMITED, FILEGROWTH = 4194304KB )
+GO
+

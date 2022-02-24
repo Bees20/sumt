@@ -1,0 +1,16 @@
+[Unit]
+Description=kafka
+Requires=network-online.target
+After=network-online.target remote-fs.target zookeeper.service
+
+[Service]
+LimitNOFILE=1048576
+Type=forking
+User={{ user }}
+Group={{ group }}
+Environment=KAFKA_OPTS=-javaagent:/opt/exporter/jmx_prometheus_javaagent-0.12.0.jar=7071:/opt/exporter/kafka-2_0_0.yml
+ExecStart={{kafka_install_path}}/bin/kafka-server-start.sh  -daemon {{kafka_install_path}}/config/server.properties
+ExecStop={{kafka_install_path}}/bin/kafka-server-stop.sh
+
+[Install]
+WantedBy=multi-user.target

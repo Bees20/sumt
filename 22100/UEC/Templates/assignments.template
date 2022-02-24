@@ -1,0 +1,12 @@
+[Unit]
+Description=assignmentsDaemon
+
+[Service]
+User={{ user }}
+Group={{ group }}
+ExecStart={{ start }}/assignments-ms/SumTotal.Assignments.ProcessorHost
+WorkingDirectory={{ work_location }}/assignments-ms
+Environment=PATH={{ dsbulk_location }}/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+
+[Install]
+WantedBy=default.target

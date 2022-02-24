@@ -1,0 +1,12 @@
+[Unit]
+Description=SumTotalUDACDaemon
+
+[Service]
+User={{ user }}
+Group={{ group }}
+ExecStart={{ start }}/apiservice/SumTotal.UDA.Main
+WorkingDirectory={{ work_location }}/apiservice
+
+
+[Install]
+WantedBy=default.target

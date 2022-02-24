@@ -1,0 +1,11 @@
+[Unit]
+Description=RecommendationsDaemon
+
+[Service]
+User={{ user }}
+Group={{ group }}
+ExecStart={{ start }}/recommendations/SumTotal.Recommendations.ProcessorHost
+WorkingDirectory={{ work_location }}/recommendations
+
+[Install]
+WantedBy=default.target

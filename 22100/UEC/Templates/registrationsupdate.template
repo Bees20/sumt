@@ -1,0 +1,12 @@
+[Unit]
+Description=registrationsupdateDaemon
+
+[Service]
+User={{ user }}
+Group={{ group }}
+ExecStart={{ start }}/registrationsupdate/SumTotal.RegistrationsUpdate.ProcessorHost
+WorkingDirectory={{ work_location }}/registrationsupdate
+
+
+[Install]
+WantedBy=default.target

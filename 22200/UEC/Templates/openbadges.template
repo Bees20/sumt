@@ -1,0 +1,12 @@
+[Unit]
+Description=openbadgesDaemon
+
+[Service]
+User={{ user }}
+Group={{ group }}
+ExecStart={{ start }}/openbadges/SumTotal.OpenBadges.ProcessorHost
+WorkingDirectory={{ work_location }}/openbadges
+
+
+[Install]
+WantedBy=default.target

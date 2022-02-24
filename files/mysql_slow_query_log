@@ -1,0 +1,18 @@
+
+/var/log/mysql/slowquery.log
+{
+    su root root
+    size 100M
+    dateext
+    compress
+    missingok
+    rotate 10
+    notifempty
+    delaycompress
+    sharedscripts
+    nocopytruncate
+    create 660 mysql mysql
+    postrotate
+        /usr/bin/mysql --login-path=dbjob -e'select @@global.slow_query_log into @sq_log_save; set global slow_query_log=off; select sleep(5); FLUSH SLOW LOGS; select sleep(10); set global slow_query_log=@sq_log_save;'
+    endscript
+

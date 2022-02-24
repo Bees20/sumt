@@ -1,0 +1,12 @@
+[Unit]
+Description=registrationsdeleteDaemon
+
+[Service]
+User={{ user }}
+Group={{ group }}
+ExecStart={{ start }}/registrationsdelete/SumTotal.RegistrationsDelete.ProcessorHost
+WorkingDirectory={{ work_location }}/registrationsdelete
+
+
+[Install]
+WantedBy=default.target

@@ -1,0 +1,12 @@
+[Unit]
+Description=usersummaryDaemon
+
+[Service]
+User={{ user }}
+Group={{ group }}
+ExecStart={{ start }}/usersummary/SumTotal.UserSummaryProcessor.ProcessHost
+WorkingDirectory={{ work_location }}/usersummary
+Environment=PATH={{ dsbulk_location }}/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+
+[Install]
+WantedBy=default.target

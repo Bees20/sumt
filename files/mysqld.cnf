@@ -1,0 +1,135 @@
+# Percona Server template configuration
+
+[mysqld]
+datadir   = /var/lib/mysql
+tmpdir    = /var/tmp
+pid-file  = /var/run/mysqld/mysqld.pid
+socket    = /var/lib/mysql/mysql.sock
+server-id = 1617371960 # Unique number generated with: date +%s
+max_connections = 1000
+
+# Binary log settings
+log_bin=/var/log/mysql/binlogs
+binlog_format = mixed
+binlog_cache_size = 16M
+max_binlog_size   = 100M
+sync_binlog       = 1
+innodb_support_xa = 1
+expire_logs_days  = 2
+
+# Log settings
+general_log         = 0
+slow_query_log      = 1
+long_query_time     = 3
+# log_warnings        = 0 # replaced in 5.7 by log_error_verbosity
+log_error_verbosity = 3 # 1=err only, 2=err+warn, 3=err+warn+notes
+general_log_file    = /var/log/mysql/general.log
+log-error           = /var/log/mysql/error.log
+slow_query_log_file = /var/log/mysql/slowquery.log
+log_slow_verbosity  = full
+
+# Replication settings
+# relay_log=/var/log/mysql/relaylogs/dsmmaedpv007-relay-bin
+# log_slave_updates = 1 # enable this for all slaves
+# skip_slave_start
+
+# Innodb settings
+# innodb_additional_mem_pool_size = 100M # Disable this for 5.7
+innodb_buffer_pool_size         = 12G
+innodb_data_file_path           = ibdata1:10M:autoextend
+innodb_read_io_threads          = 4
+innodb_write_io_threads         = 4
+innodb_flush_log_at_trx_commit  = 1
+innodb_lock_wait_timeout        = 120
+innodb_log_buffer_size          = 8M 
+innodb_log_files_in_group       = 3
+innodb_log_file_size            = 1024M
+innodb_max_dirty_pages_pct      = 70
+innodb_strict_mode              = on
+innodb_thread_concurrency       = 16
+innodb_file_per_table           = 1
+innodb_flush_neighbors          = 0 # Off for SSD or hybrid, On for spinning disk
+
+# General settings
+back_log                = 500 
+bulk_insert_buffer_size = 64M
+default-storage-engine  = INNODB
+interactive_timeout     = 3600
+ft_min_word_len         = 4
+join_buffer_size        = 64M
+key_buffer_size         = 64M
+lower_case_table_names  = 1
+max_allowed_packet      = 16M
+max_connect_errors      = 10
+max_heap_table_size     = 512M
+port                    = 3306
+query_cache_limit       = 0 
+query_cache_size        = 0 
+query_cache_type        = 0
+read_buffer_size        = 8M
+read_rnd_buffer_size    = 32M
+skip-name-resolve
+sort_buffer_size        = 64M
+table_open_cache        = 4096
+thread_cache_size       = 8
+# thread_concurrency      = 16 # Removed in 5.7
+thread_stack            = 256K
+tmp_table_size          = 512M
+transaction_isolation   = READ-COMMITTED
+user                    = mysql
+wait_timeout            = 3600
+event_scheduler         = 1
+
+# MyISAM Specific settings
+myisam_sort_buffer_size   = 64M # was 8M
+myisam_max_sort_file_size = 10G
+myisam_repair_threads     = 3
+myisam_recover_options    = backup,force
+
+# utf8 settings
+init_connect='SET collation_connection = utf8_general_ci'
+init_connect='SET NAMES utf8'
+character-set-server = utf8
+collation-server = utf8_general_ci
+
+[mysql]
+no-auto-rehash
+default-character-set = utf8
+#safe-updates
+
+[client]
+user = mysql
+port = 3306
+socket = /var/lib/mysql/mysql.sock
+default-character-set = utf8
+
+[mysqld_safe]
+open-files-limit = 8192
+skip-syslog
+
+[mysqldump]
+quick
+max_allowed_packet = 16M
+
+[myisamchk]
+key_buffer_size = 512M
+read_buffer = 8M
+write_buffer = 8M
+
+
+
+#
+# Remove leading # to turn on a very important data integrity option: logging
+# changes to the binary log between backups.
+# log_bin
+#
+# Remove leading # to set options mainly useful for reporting servers.
+# The server defaults are faster for transactions and fast SELECTs.
+# Adjust sizes as needed, experiment to find the optimal values.
+# join_buffer_size = 128M
+# sort_buffer_size = 2M
+# read_rnd_buffer_size = 2M
+#
+# Disabling symbolic-links is recommended to prevent assorted security risks
+symbolic-links=0
+

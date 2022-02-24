@@ -1,0 +1,11 @@
+[Unit]
+Description=collabtoolsDaemon
+
+[Service]
+User={{ user }}
+Group={{ group }}
+ExecStart={{ start }}/collabtools/SumTotal.CollabTools.Teams.ProcessorHost
+WorkingDirectory={{ work_location }}/collabtools
+
+[Install]
+WantedBy=default.target

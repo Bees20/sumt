@@ -1,0 +1,12 @@
+[Unit]
+Description=contentmanagementDaemon
+
+[Service]
+User={{ user }}
+Group={{ group }}
+ExecStart={{ start }}/contentmanagement/SumTotal.ContentMgmt.ProcessorHost
+WorkingDirectory={{ work_location }}/contentmanagement
+
+
+[Install]
+WantedBy=default.target

@@ -1,0 +1,28 @@
+#!yaml|gpg
+
+user: root
+domainuser: svc_saltstack
+svcresource: Svc_Accounts
+sqlaccount: svc_sqladmin-dev
+winAdmin: Administrator
+udacresource: DEV_CMDB_AG
+netscalerResource: network_administrators
+vrouser: svc_vra_vro_pwrshell
+uxdExporteruser: mysqlExporter
+umdExporteruser: mongodExporter
+
+pmpToken: |
+  -----BEGIN PGP MESSAGE-----\nhQEMA9XXxwoxYCDiAQf+Px6tu0LhjENjneBnRk9odcSi9aTfZOEokGyXpaEhkNIlKyanBH0RzaD/lTkoBBvhf+AwLvMoA1r8lJPVlwcGZx+fyRyyGMlxvn/Mi761ZzVSC6YcqZ7N1cVlVkHyJpxoh+/ZWIrn1uUJUQK/5/em/KRK4zKvWXHiNijcjDxdi7Y0k8w32QBGY50hpnxqK+DgRRqeQNXqHVkWGpcrHDmBzgnc5w5I378d05gRetaRbDR5H7iHA4/TW0TPpmd9/BkBiE0FbN8Dx7Jmft2woOs9Rt0mnzU7wz9pKu38sfxvhxmgHO/5AQj8EtKb8bZcQljHxOi8/z0kVTApqZ4a1tCEq9JfATkYEhsC2WUdQ4bLyvqBJfoagnE+qZ5f4m40RAdujjtTI4YGfVO030pjQ9srXPiESP5DCWDBG2jtNGUxHYTwRObyxahFDfi6rgaN1pXE7Xawksn9zTaPkkjI2SVTa4I==lnn6\n-----END PGP MESSAGE-----
+
+
+pmpHost: |
+  -----BEGIN PGP MESSAGE-----\nhQEMA9XXxwoxYCDiAQf/bJEIrmaSPyJTuYZ17ApOwv8TCcl9f+btk6vHLkY2o6+QF1wlMYfY/R+Anz3syRhO06mLOSpyHS9ARdFQZthd8H6p2mXgo8eePMwSd7DCRNW8aBIsCABOmwxlFrlIwNx3U+JSYHSlSf4pQH8e4eRFiDjtTBvGmJmZZufmDoKKfeYaEJgxJ8qoAYEW6jsSeGCkwY//bYyK3Mws8Ch6kMFE76U2TV1P0utnRtL5TGR0QPk2jUKuzWT4YFvdHa7vSUDmmhCnTyxwzUQYs5b+1pBtR1zp7wFnbxEw4X0xsOGHaO5F2kZb275h3aNMw4p5LlLilIZkoQ2N+JkXMxgB/6ra8tJMAVEQqnXs4G/oNVgEExGNea7NB+DddZF8Fk1ugv6lIBcHp0/znJm8uHFtvW12vyaj5qsijqwe89zzPQE6M2dDflQ3lIbDyl2V4cAx4w===PQgt\n-----END PGP MESSAGE-----
+
+CMDB_user: |
+  -----BEGIN PGP MESSAGE-----\nhQEMA9XXxwoxYCDiAQf/TZGfzk+p5/ujLf4Gi0wpnOx+TVALr5r96uhp9mBNZfqvrFCO11fZBx9ubnNsr874B/EKgHRkdSe85ge8O7FR89tIc11K5Fk1pqK6nECtTb39bYIQCtit2JvHpXr8keGMclKesxH6IbW8JuuKQQQrcbw4xSMC6s0pjBb/iwvF5BFRT/X8nXATfAPc6UoUSWgulECDR11e7sbTGLMPvgQ9CWacq/bpbzcGkQdCyWDkdVyafZ3dH8PN7rpj9LXy76zAIHHREZL0ahREH7NiuAWTnS9C548kRYNu2S+hrMeh8J8dzWrRnXuiJ5U6wNn7x/EgdiboXYHhK4p/ncVp/zamC9JEAceFCpaMOIRiFp61olnAC4u2+SPn/d+NVW23SWlSKue2KtevsxY7yMDislIKuh2+L2gKBx+a1a74QNeiCAQD661XOVA==kp4m\n-----END PGP MESSAGE-----
+
+CMDB_DB_Name: |
+  -----BEGIN PGP MESSAGE-----\nhQEMA9XXxwoxYCDiAQf+JwKgO60dSi50Fuw5mWZt1fnrjL6EJVfHsf7dXMNRxvUfd//RkkVxeJjC3ZBHZIezOg4CXnfVfZkOpcWfOXNbrboxtS/YOoITAw36C8I4RDRxXriEwgpBkXTBbown2QYK4Jshd2W+7TIFNac5a02P/lin6w651cYEDNofHvMg1QovEU25y1tT7cvOUHzKWVavBGCq4j2dIf+GtUlfDT39MQeF6yn4KW1F+SYS+UDqEmh8YAUKuvAixNksKz43BnBZCv4rIs+op5vAgwSPVrQyiLSaumIwT8QEb9djbG3ACRAgyGaBAY/Pf4DhOp6sVJbIHZo5a0jh/bA6rRvlXFYsm9I/AQJhVzrTXJxkRZmqmW97c9horaMNSQ9p2svjNMv04FDYiYGArNCDZnTC17JfNqbWAsu4xmxkSPix6EssvMge=pDdt\n-----END PGP MESSAGE-----
+
+CMDB_server: |
+  -----BEGIN PGP MESSAGE-----\nhQEMA9XXxwoxYCDiAQf/Y26rnCSoRpDbTsg68orAYEm4lcjvMyDQqHSQDSTnf0FFfnMONDzTYf91HGW/Py0TDWTjCOGkSX/Z+Vgi6sYfrViCv5XSwoaMEOKfHDtoV6UFu/sBEJDwD6DYax+xVXWBvgVnRW4uMPpmGl6EzyGwPO5ZdwSoe4yf9HObSQ4G/GHImoPreaUviCCCc+GwEf6vwHd/nE+i+SZCTpXZfHdS4OFnDUhJueRcfVdr/iV6MOC+b5qx3wFiFaAfP+gge8XO+U1XaduclXHaA8psLAY5494ZEc2/4LO/AbkX4CR54vMw4F4fxTJL2jxadXE6ETb9EpswVnWPVWNz3Qu2zEZvz9JGAQwcIbFaL5PWwN4NNgVy67ZavM32Oy/Tv/06JEqkFrSBirbI4b9F0/WQmfn2y1+6lyywKhwxBv/sDoRmY51ggmMIRoBURQ===i/ei\n-----END PGP MESSAGE-----
